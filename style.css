@@ -1,7 +1,7 @@
 /* Importar Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-/* Reset y fuente base */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,32 +10,29 @@
 }
 
 :root {
-    /* Colores base */
+    
     --black-bg-color: #000000;
     --white-color: #ffffff;
     --dark-color: #252525;
 
-    /* Colores principales */
+    
     --primary-color: #e54a97;
     --secondary-color: #9c27b0;
     --accent-color: #e91e63;
 
-    /* Colores complementarios */
+    
     --light-pink-color: #f8bbd0;
     --medium-gray-color: #b0bec5;
 }
 
-/* Fondo general */
 body {
     background-color: var(--black-bg-color);
     color: var(--white-color);
 }
 
-/* Contenedor principal */
 .container {
-    position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -44,11 +41,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    height: 70px;
+    padding: 10px 30px;
+    height: 60px;
     background-color: var(--white-color);
     color: var(--black-bg-color);
-    box-shadow: 0 0 10px rgba(229, 74, 151, 0.3);
     z-index: 999;
 }
 
@@ -59,18 +55,18 @@ header {
 
 .left img {
     width: 55px;
-    margin: 0 15px;
+    margin-right: 15px;
 
 }
 
-/* Navegación */
 header ul {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    padding: 10px 30px;
+    gap: 15px;
+    padding: 8px 20px;
     border-radius: 12px;
     background-color: rgba(229, 74, 151, 0.05);
+    list-style: none; 
 }
 
 header ul a {
@@ -88,7 +84,7 @@ header ul a:hover {
     background-color: var(--primary-color);
 }
 
-/* Íconos */
+
 .box-icons {
     display: flex;
     gap: 20px;
@@ -115,12 +111,12 @@ header ul a:hover {
     box-shadow: 0 0 8px var(--primary-color);
 }
 
-/* Hero */
+
 .hero {
     position: relative;
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
@@ -176,13 +172,13 @@ header ul a:hover {
 }
 .programadora {
     position: absolute;
-    right: 5%;
+    right: 20%;
     height: 500px;
-    max-width: 90%;
+    max-width: 100%;
     mix-blend-mode: lighten;
 }
 
-/* Media Queries para responsive design */
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -199,7 +195,7 @@ header ul a:hover {
 
     .programadora {
         position: static;
-        height: 350px;
+        height: 500px;
         margin: 0 auto;
     }
 
@@ -208,64 +204,86 @@ header ul a:hover {
         flex-wrap: wrap;
         justify-content: center;
         padding: 10px;
+        list-style: none;
     }
 
     .box-icons {
         gap: 15px;
     }
 }
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.info-card h1 {
+    color: var(--primary-color);
+    font-size: 55px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info-card p {
+    color: var(--white-color);
+    font-size: 20px;
+}
+
 
 @media (max-width: 768px) {
-    header {
+    .about-section {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px 5%;
+    }
+
+    .info-card {
+        max-width: 150px;
         flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
         text-align: center;
     }
 
-    header ul {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+    .info-card h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 40px;
     }
 
-    header ul a {
-        margin: 5px 0;
-    }
-
-    .box-icons {
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .hero-info h1 {
-        font-size: 38px;
-    }
-
-    .hero-info p {
-        font-size: 16px;
-    }
-
-    .programadora {
-        height: 300px;
+    .info-card p {
+        font-size: 18px;
     }
 }
 
+
 @media (max-width: 480px) {
-    .hero-info h1 {
-        font-size: 32px;
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
     }
 
-    .hero-info p {
-        font-size: 15px;
+    .info-card {
+        max-width: 80%;
     }
 
-    .hero-info button {
-        padding: 10px 24px;
+    .info-card h1 {
+        font-size: 36px;
     }
 
-    .programadora {
-        height: 250px;
+    .info-card p {
+        font-size: 16px;
     }
 }
