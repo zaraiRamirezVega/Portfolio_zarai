@@ -1,11 +1,37 @@
-body {
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Reset y fuente base */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
-    background-color: #fce4ec; /* fondo rosado suave */
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+:root {
+    /* Colores base */
+    --black-bg-color: #000000;
+    --white-color: #ffffff;
+    --dark-color: #252525;
+
+    /* Colores principales */
+    --primary-color: #e54a97;
+    --secondary-color: #9c27b0;
+    --accent-color: #e91e63;
+
+    /* Colores complementarios */
+    --light-pink-color: #f8bbd0;
+    --medium-gray-color: #b0bec5;
+}
+
+/* Fondo general */
+body {
+    background-color: var(--black-bg-color);
+    color: var(--white-color);
+}
+
+/* Contenedor principal */
 .container {
     position: relative;
     width: 100%;
@@ -13,34 +39,17 @@ body {
     overflow: hidden;
 }
 
-.back-vid {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: blur(6px) brightness(0.8);
-}
-
-.cover {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(248, 187, 208, 0.3); /* capa rosa pastel */
-}
-
+/* Encabezado */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     height: 70px;
-    background-color: rgba(248, 187, 208, 0.3);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 0 10px white;
+    background-color: var(--white-color);
+    color: var(--black-bg-color);
+    box-shadow: 0 0 10px rgba(229, 74, 151, 0.3);
     z-index: 999;
-    color: #333;
 }
 
 .left {
@@ -49,128 +58,214 @@ header {
 }
 
 .left img {
-    width: 50px;
+    width: 55px;
     margin: 0 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 8px white;
+
 }
 
+/* Navegación */
 header ul {
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    padding: 10px 25px;
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 8px #f48fb1;
+    width: 50%;
+    padding: 10px 30px;
     border-radius: 12px;
+    background-color: rgba(229, 74, 151, 0.05);
 }
 
 header ul a {
     text-decoration: none;
-    color: #333;
+    color: var(--black-bg-color);
     font-weight: 600;
     transition: 0.3s;
     margin: 0 10px;
-    
+    padding: 5px 10px;
+    border-radius: 8px;
 }
 
 header ul a:hover {
-    color: #ec407a;
-    text-shadow: 0 0 6px #f8bbd0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
 
+/* Íconos */
 .box-icons {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .box-icons p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #ec407a;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #333;
+    background-color: var(--white-color);
+    color: var(--primary-color);
     transition: all 0.3s ease;
 }
 
 .box-icons p:hover {
-    background-color: #ec407a;
-    color: white;
-    box-shadow: 0 0 10px #ec407a;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 0 8px var(--primary-color);
 }
 
-.hero{
+/* Hero */
+.hero {
     position: relative;
     display: flex;
     width: 100%;
     height: 80vh;
     align-items: center;
     justify-content: space-between;
+    padding: 0 5%;
+    z-index: 1;
 }
 
-.hero-info{
-    position: absolute;
-    left: 5%;
-
-}
-
-.hero-info div{
-    color: #727272;
-    padding:  8px 5px;
-    border-radius:  50px;
-    border: 1px solid white;
-    width: 240px;
-    background-color: black;
-    box-shadow:  0 0 5px #ec407a;
-}
-
-.hero-info h1{
-    font-size:  60px;
+.hero-info {
     max-width: 600px;
-    font-weight:  700;
-    line-height: 60px;
-    margin-top: 40px;
-    margin-bottom: 30px;
 }
 
-.hero-info p{
-    max-width:  550px;
-    line-height:  25px;
-    margin-bottom: 40px;
-    font-size:  20px;
+.hero-info div {
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: rgba(229, 74, 151, 0.1);
+    box-shadow: 0 0 6px rgba(229, 74, 151, 0.3);
 }
 
-.hero-info button{
-    color: white;
-    padding: 15px 35px;
-    border-radius:  10px;
-    border:  1px solid #ec407a;
-    background-color: black;
-    box-shadow:  0 0 5px #ec407a;
+.hero-info h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--white-color);
+}
+
+.hero-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: var(--medium-gray-color);
+}
+
+.hero-info button {
+    padding: 14px 32px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--black-bg-color);
+    color: var(--primary-color);
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.hero-info button:hover{
-    box-shadow:  0 0 15px #f48fb1;
+.hero-info button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 0 12px var(--light-pink-color);
+}
+.programadora {
+    position: absolute;
+    right: 5%;
+    height: 500px;
+    max-width: 90%;
+    mix-blend-mode: lighten;
 }
 
-
-
-
-
-
-
-
-@media (min-aspect-ratio: 16/9) {
-    .back-vid {
-        width: 100%;
+/* Media Queries para responsive design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
         height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-info {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .programadora {
+        position: static;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    header ul {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .box-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul a {
+        margin: 5px 0;
+    }
+
+    .box-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-info h1 {
+        font-size: 38px;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+    }
+
+    .programadora {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-info h1 {
+        font-size: 32px;
+    }
+
+    .hero-info p {
+        font-size: 15px;
+    }
+
+    .hero-info button {
+        padding: 10px 24px;
+    }
+
+    .programadora {
+        height: 250px;
     }
 }
