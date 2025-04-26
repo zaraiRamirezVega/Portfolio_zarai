@@ -112,19 +112,35 @@ header ul a:hover {
 }
 
 
+
+#boby{
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media(min-width: 768px){
+    #body{
+        width: 90%;
+    }
+}
+@media(min-width: 1024px){
+    #body{
+        width: 80%;
+    }
+}
+
+
 .hero {
-    position: relative;
     display: flex;
     width: 100%;
-    height: 70vh;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
-    z-index: 1;
+    padding-top: 100px;
+    flex-wrap: wrap;
 }
 
 .hero-info {
-    max-width: 600px;
+    width: 100%;
 }
 
 .hero-info div {
@@ -132,7 +148,6 @@ header ul a:hover {
     padding: 10px 15px;
     border-radius: 50px;
     border: 2px solid var(--primary-color);
-    display: inline-block;
     font-weight: 500;
     margin-bottom: 20px;
     background-color: rgba(229, 74, 151, 0.1);
@@ -140,21 +155,24 @@ header ul a:hover {
 }
 
 .hero-info h1 {
-    font-size: 56px;
+    font-size: 30px;
+    text-align: center;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: var(--white-color);
 }
 
 .hero-info p {
     font-size: 18px;
+    text-align: center;
     line-height: 1.6;
     margin-bottom: 35px;
     color: var(--medium-gray-color);
 }
 
 .hero-info button {
+    width: 100%;
     padding: 14px 32px;
     border-radius: 10px;
     border: 2px solid var(--primary-color);
@@ -163,6 +181,7 @@ header ul a:hover {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 .hero-info button:hover {
@@ -170,69 +189,76 @@ header ul a:hover {
     color: var(--white-color);
     box-shadow: 0 0 12px var(--light-pink-color);
 }
-.programadora {
-    position: absolute;
-    right: 20%;
-    height: 500px;
-    max-width: 100%;
+.programadora-sm {
+    width: 100%;
     mix-blend-mode: lighten;
 }
 
+.programadora-lg{
+    display: none;
+}
 
-@media (max-width: 1024px) {
+
+@media (min-width: 768px) {
     .hero {
-        flex-direction: column;
+        display: flex;
         justify-content: center;
-        text-align: center;
-        height: auto;
-        padding: 40px 20px;
+        
     }
 
     .hero-info {
-        max-width: 100%;
+        width: 50%;
         margin-bottom: 30px;
     }
 
-    .programadora {
-        position: static;
-        height: 500px;
-        margin: 0 auto;
+    .hero-info div{
+        margin-bottom: 20px;
     }
 
-    header ul {
-        width: 70%;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-        list-style: none;
+    .hero-info button{
+        width: 50%;
     }
 
-    .box-icons {
-        gap: 15px;
+    .hero-info h1{
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .hero-info p {
+        font-size:  18px;
+        text-align:  left;
+    }
+
+    .programadora-sm {
+        display: none;
+    }
+
+    .programadora-lg{
+        display: block;
+        height:  40%;
     }
 }
+
 .about-section {
+    width: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    padding: 5px 10%;
     flex-wrap: wrap;
-    gap: 30px;
 }
 
 .info-card {
     display: flex;
     align-items: center;
-    max-width: 200px;
-    flex: 1;
-    min-width: 140px;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
 }
 
 .info-card h1 {
     color: var(--primary-color);
-    font-size: 55px;
-    margin-right: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 50px;
+
 }
 
 .info-card p {
@@ -241,49 +267,26 @@ header ul a:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .about-section {
         flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-        padding: 30px 5%;
+        justify-content: space-between;
+        
     }
 
     .info-card {
-        max-width: 150px;
+        width: 23%;
         flex-direction: column;
         text-align: center;
     }
 
     .info-card h1 {
         margin-right: 0;
-        margin-bottom: 10px;
         font-size: 40px;
+        margin-bottom: 10px;
     }
 
     .info-card p {
         font-size: 18px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .about-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .info-card {
-        max-width: 80%;
-    }
-
-    .info-card h1 {
-        font-size: 36px;
-    }
-
-    .info-card p {
-        font-size: 16px;
     }
 }
