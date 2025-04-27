@@ -46,6 +46,9 @@ header {
     background-color: var(--white-color);
     color: var(--black-bg-color);
     z-index: 999;
+    position: sticky;
+    top: 0;
+    
 }
 
 .left {
@@ -65,8 +68,8 @@ header ul {
     gap: 15px;
     padding: 8px 20px;
     border-radius: 12px;
-    background-color: rgba(229, 74, 151, 0.05);
     list-style: none; 
+    background-color: transparent;
 }
 
 header ul a {
@@ -84,7 +87,7 @@ header ul a:hover {
     background-color: var(--primary-color);
 }
 
-
+/*Iconos*/
 .box-icons {
     display: flex;
     gap: 20px;
@@ -135,7 +138,7 @@ header ul a:hover {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding-top: 100px;
+    padding-top: 40px;
     flex-wrap: wrap;
 }
 
@@ -207,7 +210,7 @@ header ul a:hover {
     }
 
     .hero-info {
-        width: 50%;
+        width: 60%;
         margin-bottom: 30px;
     }
 
@@ -268,6 +271,8 @@ header ul a:hover {
 
 
 @media (min-width: 768px) {
+
+    
     .about-section {
         flex-direction: row;
         justify-content: space-between;
@@ -288,5 +293,45 @@ header ul a:hover {
 
     .info-card p {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    header ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .box-icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-icons {
+        gap: 8px;
     }
 }
