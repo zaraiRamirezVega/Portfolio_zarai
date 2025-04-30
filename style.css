@@ -28,6 +28,8 @@
 body {
     background-color: var(--black-bg-color);
     color: var(--white-color);
+    padding-top: 120px; 
+    
 }
 
 .container {
@@ -38,17 +40,18 @@ body {
 
 /* Encabezado */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    height: 60px;
-    background-color: var(--white-color);
-    color: var(--black-bg-color);
-    z-index: 999;
-    position: sticky;
+    color: var(--primary-color);
+    position: fixed;
     top: 0;
-    
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color); 
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .left {
@@ -413,7 +416,7 @@ header ul a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
+    
 }
 
 .project-card:hover {
