@@ -304,7 +304,7 @@ header ul a:hover {
     header {
         flex-wrap: wrap;
         height: auto;
-        padding: 10px 15px;
+        padding: 5px 15px;
     }
 
     .left {
@@ -325,7 +325,7 @@ header ul a:hover {
     .box-icons {
         width: 100%;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 }
 
