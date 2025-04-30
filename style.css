@@ -370,7 +370,7 @@ header ul a:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
-
+/*Linea division*/
 .section-divider {
     border: none;
     height: 2px;
@@ -379,3 +379,5 @@ header ul a:hover {
     width: 90%;
     opacity: 0.6;
 }
+
+/*Proyect - section*/
