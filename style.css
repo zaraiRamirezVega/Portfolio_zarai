@@ -112,6 +112,7 @@ header ul a:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
     box-shadow: 0 0 8px var(--primary-color);
+    
 }
 
 
@@ -334,4 +335,47 @@ header ul a:hover {
     .box-icons {
         gap: 8px;
     }
+}
+
+/*Skill section*/
+.skills-section {
+    padding: 30px 10%;
+    background-color: var(--black-bg-color);
+    text-align: center;
+}
+.skills-section h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skill-card {
+    background-color:var(--black-bg-color);
+    color: var(--white-color);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s;
+    border: 2px solid var(--primary-color);
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.section-divider {
+    border: none;
+    height: 2px;
+    background-color: var(--primary-color); 
+    margin: 0 auto;
+    width: 90%;
+    opacity: 0.6;
 }
